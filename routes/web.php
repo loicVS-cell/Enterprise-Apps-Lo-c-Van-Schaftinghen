@@ -10,3 +10,4 @@ Route::get('/events/{event}', [EventController::class, 'show'])->name('events.sh
 
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
+Route::post('/contact', App\Http\Controllers\ContactController::class);
