@@ -26,10 +26,10 @@ class EventController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255',
             'organization' => 'required|max:255',
-            'description' => 'nullable',
-            'tijdstip' => 'nullable|date',
-            'location_id' => 'nullable|exists:locations,id',
-            'email_contactpersoon' => 'nullable|email|max:255',
+            'description' => 'required',
+            'tijdstip' => 'required|date',
+            'location_id' => 'required|exists:locations,id',
+            'email_contactpersoon' => 'required|email:filter|max:255',
         ]);
 
         Event::create($validated);
