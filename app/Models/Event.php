@@ -11,7 +11,12 @@ class Event extends Model
         'organization',
         'description',
         'tijdstip',
-        'location',
+        'location_id',
         'email_contactpersoon',
     ];
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
 }

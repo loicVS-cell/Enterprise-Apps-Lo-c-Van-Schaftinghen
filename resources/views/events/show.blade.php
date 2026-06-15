@@ -31,7 +31,9 @@
                 @if ($event->location)
                     <div>
                         <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Locatie</h2>
-                        <p class="text-gray-800">{{ $event->location }}</p>
+                        <p class="text-gray-800 font-medium">{{ $event->location->name }}</p>
+                        <p class="text-gray-600 text-sm">{{ $event->location->address }}</p>
+                        <p class="text-gray-600 text-sm">Capaciteit: {{ $event->location->capacity }} personen</p>
                     </div>
                 @endif
                 @if ($event->email_contactpersoon)

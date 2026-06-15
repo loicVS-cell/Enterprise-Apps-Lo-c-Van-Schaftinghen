@@ -41,10 +41,17 @@
                     @error('tijdstip') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                 </div>
                 <div>
-                    <label for="location" class="block text-sm font-semibold text-black mb-1">Locatie</label>
-                    <input type="text" name="location" id="location" value="{{ old('location') }}"
+                    <label for="location_id" class="block text-sm font-semibold text-black mb-1">Locatie</label>
+                    <select name="location_id" id="location_id"
                         class="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 outline-none transition">
-                    @error('location') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
+                        <option value="">Geen locatie</option>
+                        @foreach ($locations as $location)
+                            <option value="{{ $location->id }}" {{ old('location_id') == $location->id ? 'selected' : '' }}>
+                                {{ $location->name }} ({{ $location->address }})
+                            </option>
+                        @endforeach
+                    </select>
+                    @error('location_id') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
                 </div>
             </div>
 

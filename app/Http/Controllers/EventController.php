@@ -9,14 +9,16 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::latest()->take(10)->get();
+        $events = Event::with('location')->latest()->take(10)->get();
 
         return view('events.index', compact('events'));
     }
 
     public function create()
     {
-        return view('events.create');
+        $locations = \App\Models\Location::all();
+
+        return view('events.create', compact('locations'));
     }
 
     public function store(Request $request)
@@ -26,7 +28,7 @@ class EventController extends Controller
             'organization' => 'required|max:255',
             'description' => 'nullable',
             'tijdstip' => 'nullable|date',
-            'location' => 'nullable|max:255',
+            'location_id' => 'nullable|exists:locations,id',
             'email_contactpersoon' => 'nullable|email|max:255',
         ]);
 
@@ -37,6 +39,8 @@ class EventController extends Controller
 
     public function show(Event $event)
     {
+        $event->load('location');
+
         return view('events.show', compact('event'));
     }
 

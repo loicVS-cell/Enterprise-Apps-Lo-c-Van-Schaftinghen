@@ -21,7 +21,7 @@
                 @forelse ($events as $event)
                     <tr class="hover:bg-yellow-50 transition">
                         <td class="px-6 py-4 text-sm font-medium text-black">{{ $event->title }}</td>
-                        <td class="px-6 py-4 text-sm text-gray-700">{{ $event->organization }}</td>
+                        <td class="px-6 py-4 text-sm text-gray-700">{{ $event->organization }}@if($event->location) — {{ $event->location->name }}@endif</td>
                         <td class="px-6 py-4 text-right">
                             <a href="{{ route('events.show', $event) }}" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-1.5 rounded text-sm transition">Openen</a>
                         </td>
