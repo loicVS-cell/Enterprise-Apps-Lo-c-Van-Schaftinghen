@@ -16,80 +16,90 @@ class EventSeeder extends Seeder
             'title' => 'Laravel Meetup',
             'organization' => 'Laravel Belgium',
             'description' => 'Een maandelijkse bijeenkomst voor Laravel-ontwikkelaars.',
-            'date' => '2026-07-15',
+            'tijdstip' => '2026-07-15 18:00:00',
             'location' => 'Antwerpen',
+            'email_contactpersoon' => 'info@laravel-belgium.be',
         ]);
 
         \App\Models\Event::create([
             'title' => 'PHP Conference 2026',
             'organization' => 'PHP Belgium',
             'description' => 'De grootste PHP-conferentie van het jaar.',
-            'date' => '2026-09-20',
+            'tijdstip' => '2026-09-20 09:00:00',
             'location' => 'Brussel',
+            'email_contactpersoon' => 'organisatie@phpbelgium.be',
         ]);
 
         \App\Models\Event::create([
             'title' => 'Workshop Tailwind CSS',
             'organization' => 'Webdesign Academy',
             'description' => 'Praktische workshop over Tailwind CSS voor beginners.',
-            'date' => '2026-08-10',
+            'tijdstip' => '2026-08-10 14:00:00',
             'location' => 'Gent',
+            'email_contactpersoon' => 'info@webdesignacademy.be',
         ]);
 
         \App\Models\Event::create([
             'title' => 'Hackathon 2026',
-            'organization' => 'Tech Inc.',
+            'organization' => 'Eigen beheer',
             'description' => '24-uurs hackathon voor innovators.',
-            'date' => '2026-10-05',
+            'tijdstip' => '2026-10-05 10:00:00',
             'location' => 'Leuven',
+            'email_contactpersoon' => 'hackathon@techinc.com',
         ]);
 
         \App\Models\Event::create([
             'title' => 'Vue.js Amsterdam',
             'organization' => 'Vue.js Nederland',
             'description' => 'Internationale Vue.js conferentie.',
-            'date' => '2026-11-12',
+            'tijdstip' => '2026-11-12 09:30:00',
             'location' => 'Amsterdam',
+            'email_contactpersoon' => 'info@vuejs.amsterdam',
         ]);
 
         \App\Models\Event::create([
             'title' => 'Symfony Live',
             'organization' => 'Symfony France',
             'description' => 'Conference rond het Symfony framework.',
-            'date' => '2026-12-03',
+            'tijdstip' => '2026-12-03 08:00:00',
             'location' => 'Parijs',
+            'email_contactpersoon' => 'contact@symfony.live',
         ]);
 
         \App\Models\Event::create([
             'title' => 'AI & Tech Summit',
             'organization' => 'Digital Future',
             'description' => 'Top over artificiële intelligentie en technologie.',
-            'date' => '2027-01-18',
+            'tijdstip' => '2027-01-18 10:00:00',
             'location' => 'Berlijn',
+            'email_contactpersoon' => 'info@digitalfuture.eu',
         ]);
 
         \App\Models\Event::create([
             'title' => 'DevOps Days',
             'organization' => 'DevOps Community',
             'description' => 'Twee dagen over CI/CD, Kubernetes en cloud.',
-            'date' => '2027-02-22',
+            'tijdstip' => '2027-02-22 09:00:00',
             'location' => 'Londen',
+            'email_contactpersoon' => 'team@devopsdays.org',
         ]);
 
         \App\Models\Event::create([
             'title' => 'React Summit',
             'organization' => 'React Europa',
             'description' => 'Europese React.js summit.',
-            'date' => '2027-03-14',
+            'tijdstip' => '2027-03-14 10:00:00',
             'location' => 'Amsterdam',
+            'email_contactpersoon' => 'info@reactsummit.eu',
         ]);
 
         \App\Models\Event::create([
             'title' => 'Cybersecurity Forum',
             'organization' => 'Secure IT',
             'description' => 'Forum over cybersecurity en privacy.',
-            'date' => '2027-04-08',
+            'tijdstip' => '2027-04-08 13:00:00',
             'location' => 'Den Haag',
+            'email_contactpersoon' => 'info@secureit.nl',
         ]);
     }
 }
