@@ -26,5 +26,24 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         @yield('content')
     </main>
+
+    <footer class="bg-black text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-300">
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Adres</h3>
+                    <p>Quai de l'Industrie 170<br>1070 Anderlecht</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-white mb-1">Contact</h3>
+                    <p>info@anderlechtse-ngo.be<br>+32 (0)2 520 00 00</p>
+                </div>
+                <div class="text-right sm:text-left">
+                    <h3 class="font-semibold text-white mb-1">Anderlechtse NGO</h3>
+                    <p>&copy; {{ date('Y') }} — Alle rechten voorbehouden</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
