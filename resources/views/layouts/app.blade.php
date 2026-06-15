@@ -7,7 +7,7 @@
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-white text-black antialiased">
+<body class="bg-white text-black antialiased flex flex-col min-h-screen">
     <nav class="bg-black text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -20,11 +20,11 @@
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
         @yield('content')
     </main>
 
-    <footer class="bg-black text-white mt-12">
+    <footer class="bg-black text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-400">
             <p>&copy; {{ date('Y') }} Anderlechtse NGO. Alle rechten voorbehouden.</p>
         </div>
