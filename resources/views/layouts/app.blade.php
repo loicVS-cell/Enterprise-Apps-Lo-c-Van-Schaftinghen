@@ -11,13 +11,10 @@
     <nav class="bg-black text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-8">
-                    <a href="{{ route('events.index') }}" class="font-bold text-lg tracking-tight hover:text-yellow-400 transition">Events</a>
-                    <div class="flex space-x-6">
-                        <a href="{{ route('events.index') }}" class="hover:text-yellow-400 transition">Home</a>
-                        <a href="{{ route('about') }}" class="hover:text-yellow-400 transition">About</a>
-                        <a href="{{ route('contact') }}" class="hover:text-yellow-400 transition">Contact</a>
-                    </div>
+                <a href="{{ route('events.index') }}" class="font-bold text-lg tracking-tight hover:text-yellow-400 transition">Anderlechtse NGO</a>
+                <div class="flex space-x-6">
+                    <a href="{{ route('events.create') }}" class="hover:text-yellow-400 transition">New</a>
+                    <a href="{{ route('about') }}" class="hover:text-yellow-400 transition">About</a>
                 </div>
             </div>
         </div>
@@ -28,21 +25,8 @@
     </main>
 
     <footer class="bg-black text-white mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-300">
-                <div>
-                    <h3 class="font-semibold text-white mb-1">Adres</h3>
-                    <p>Quai de l'Industrie 170<br>1070 Anderlecht</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-white mb-1">Contact</h3>
-                    <p>info@anderlechtse-ngo.be<br>+32 (0)2 520 00 00</p>
-                </div>
-                <div class="text-right sm:text-left">
-                    <h3 class="font-semibold text-white mb-1">Anderlechtse NGO</h3>
-                    <p>&copy; {{ date('Y') }} — Alle rechten voorbehouden</p>
-                </div>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-400">
+            <p>&copy; {{ date('Y') }} Anderlechtse NGO. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 </body>
